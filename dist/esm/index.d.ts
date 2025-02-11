@@ -16,7 +16,7 @@ export type IndexDef<T> = ((record: T) => any) | {
  * T is the type for records stored in the main sublevel.
  * K is the type for primary keys (defaulting to string).
  */
-export declare class SecondaryIndexManager<T = any, K = string> {
+export declare class Index<T = any, K = string> {
     main: AbstractSublevel<any, any, K, T>;
     db: AbstractLevel<any, any, any>;
     indexes: Record<string, {

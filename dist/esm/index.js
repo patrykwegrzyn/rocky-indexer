@@ -33,7 +33,7 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SecondaryIndexManager = void 0;
+exports.Index = void 0;
 const charwise = __importStar(require("charwise-compact"));
 /**
  * SecondaryIndexManager adds secondary indexing on top of a main sublevel.
@@ -42,7 +42,7 @@ const charwise = __importStar(require("charwise-compact"));
  * T is the type for records stored in the main sublevel.
  * K is the type for primary keys (defaulting to string).
  */
-class SecondaryIndexManager {
+class Index {
     constructor(mainSublevel, indexes) {
         this.indexes = {};
         this.main = mainSublevel;
@@ -154,4 +154,4 @@ class SecondaryIndexManager {
         return records.filter((record) => record !== undefined);
     }
 }
-exports.SecondaryIndexManager = SecondaryIndexManager;
+exports.Index = Index;
